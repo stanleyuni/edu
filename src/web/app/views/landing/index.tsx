@@ -23,8 +23,9 @@ const Home = (props) => {
     },
     stanley: {
       height: 380, 
-      width: 960, 
-      maxWidth: '100%',
+      width: 960,
+      maxWidth: '90%',
+      margin: 10,
       resizeMode: 'contain',
       top: 0, 
       position: 'absolute', 
@@ -58,6 +59,30 @@ const Home = (props) => {
       fontSize: 42,
       lineHeight: 84,
       margin: 'auto'
+    },
+    comingSoonContainer: {
+      borderColor: 'white',
+      borderWidth: 3,
+      width: 400,
+      maxWidth: width-10,
+      backgroundColor: "#000000c0",
+      padding: 10,
+      margin: 'auto',
+      marginBottom: 200,
+      flexDirection: 'column',
+      flexWrap: 'wrap'
+    },
+    comingSoon: {
+      color: "white",
+      fontSize: 30,
+      fontWeight: "bold",
+      textAlign: "center",
+    },
+    diploma: {
+      color: 'white',
+      fontSize: 25,
+      fontWeight: '100',
+      textAlign: 'center'
     }
   });
 
@@ -72,6 +97,14 @@ const Home = (props) => {
           source={require('../../../public/completed-mock.png')}
           style={styles.stanley}
         />
+        <View style={styles.comingSoonContainer}>
+          <Text style={styles.comingSoon}>
+            COMING SOON
+          </Text>
+          <Text style={styles.diploma}>
+            Diploma of Arts
+          </Text>
+        </View>
         <View style={styles.footer}>
           <Text style={styles.leftText}>
             STUDY

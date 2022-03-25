@@ -18,21 +18,17 @@ import {
 	initialWindowMetrics, 
 	SafeAreaView 
 } from 'react-native-safe-area-context';
-import { Provider } from 'react-redux'
 
 // App components
 import AppBar from './views/app-bar';
 import AppRoutes from './routes';
 
 const Index = () => {
-	const dark = false;
+	const dark = true;
 	const logged_in = true;
 	const theme = dark ? DarkTheme : DefaultTheme;
 	const { height, width } = useWindowDimensions();
-
-	// Learn more: https://bit.ly/CRA-vitals
-	// reportWebVitals();
-
+	
 	const styles = StyleSheet.create({
 		view: {
 			minHeight: height,

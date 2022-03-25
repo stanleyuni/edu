@@ -14,7 +14,8 @@
     "android": "~/Library/Android/sdk/emulator/emulator -avd Pixel_3a_API_32_arm64-v8a -netdelay none -netspeed full",
     "web": "react-app-rewired start",
     "build": "rm -rf dist && react-app-rewired build && tsc",
-    "start": "echo 'no start script'"
+    "start": "echo 'no start script'",
+    "firebase": "rm -rf dist && react-app-rewired build && firebase deploy"
   },
   "contributors": [
     {
@@ -76,6 +77,8 @@
     "expo-status-bar": "~1.2.0",
     "express": "^4.17.3",
     "express-graphql": "^0.12.0",
+    "firebase": "^9.6.10",
+    "firebase-tools": "^10.5.0",
     "graphql": "^16.3.0",
     "jsonwebtoken": "^8.5.1",
     "react": "^17.0.1",

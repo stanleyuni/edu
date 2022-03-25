@@ -5,9 +5,12 @@ import {
   useWindowDimensions,
   ImageBackground,
   Text,
-  Image
+  Image,
+  TouchableOpacity
 } from 'react-native';
-import { useNavigate } from 'react-router';
+import { 
+  useNavigate
+} from 'react-router-native';
 
 const Home = (props) => {
   const { width, height } = useWindowDimensions();
@@ -22,16 +25,17 @@ const Home = (props) => {
       justifyContent: "center"
     },
     stanley: {
-      height: 380, 
+      height: 380,
       width: 960,
       maxWidth: '90%',
       margin: 10,
       resizeMode: 'contain',
-      top: 0, 
-      position: 'absolute', 
-      shadowColor: '#202020',
+      top: 0,
+      position: 'absolute',
+      shadowColor: '#494949',
       shadowOffset: { width: 0, height: 0 },
       shadowRadius: 5,
+      shadowOpacity: 1
     },
     footer: {
       display: 'flex',
@@ -64,11 +68,11 @@ const Home = (props) => {
       borderColor: 'white',
       borderWidth: 3,
       width: 400,
-      maxWidth: width-10,
+      maxWidth: width - 10,
       backgroundColor: "#000000c0",
       padding: 10,
+      marginBottom: 250,
       margin: 'auto',
-      marginBottom: 200,
       flexDirection: 'column',
       flexWrap: 'wrap'
     },
@@ -82,7 +86,8 @@ const Home = (props) => {
       color: 'white',
       fontSize: 25,
       fontWeight: '100',
-      textAlign: 'center'
+      textAlign: 'center',
+      fontStyle: 'italic'
     }
   });
 
@@ -97,14 +102,16 @@ const Home = (props) => {
           source={require('../../../public/completed-mock.png')}
           style={styles.stanley}
         />
-        <View style={styles.comingSoonContainer}>
-          <Text style={styles.comingSoon}>
-            COMING SOON
-          </Text>
-          <Text style={styles.diploma}>
-            Diploma of Arts
-          </Text>
-        </View>
+        <TouchableOpacity style={styles.comingSoonContainer} onPress={() => nav('/coming-soon')}>
+          <View>
+            <Text style={styles.comingSoon}>
+              COMING SOON
+            </Text>
+            <Text style={styles.diploma}>
+              Diploma of Arts
+            </Text>
+          </View>
+        </TouchableOpacity>
         <View style={styles.footer}>
           <Text style={styles.leftText}>
             STUDY
